@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>UCNE Database Search</title>
+	<link rel="stylesheet" type="text/css" href="css/final.css" />
+	<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/final.js"></script>
+
+</head>
+<body id="main">
+	<h1>Ultraconserved Non-coding Element Database</h1>
+	
+	<!-- FORM INFO -->
+	<form id="UCNE_search" name='UCNE_search' action='' >
+
+		<!--ORGANISM AND UCNE ID/NAME INPUTS-->
+		<label for="UCNE_id">UCNE id:</label>
+		<input id="UCNE_id" type="search" name="UCNE_id" placeholder="4053"/><br />
+		<label for="UCNE_name">UCNE name:</label>
+		<input id="UCNE_name" type="search" name="UCNE_name" value="" placeholder="FOXD3_Frederica"/><br />
+		<label for="UCRB">UCNE Regulatory Block:</label>
+		<input id="UCRB" type="search" name="UCRB" value="" placeholder="FOXD3"/><br /><br />
+		<label for="organism">Organism:</label>
+		<select name="organism" id="organism">
+			<option value=""></option>
+			<option value="human">Human</option>
+			<option value="mouse">Mouse</option>
+			<option value="zebrafish">Zebrafish</option>
+		</select><br />
+		
+		<!--CHROMOSOME INPUTS-->
+		<label for="chromosome">Chromosome:</label>
+		<input id="chromosome" type="search" name="chromosome" value="" />
+		<label for="chromosome_start">between:</label>
+		<input id="chromosome_start" type="search" name="chromosome_start"/>
+		<label for="chromosome_stop"> and </label>
+		<input id="chromosome_stop" type="search" name="chromosome_stop"/><br /><br />
+		
+		<!--MINIMUM IDENTITY/LENGTH INPUTS-->
+		<label for="identity">Minimum Identity %:</label>
+		<input id="identity" type="search" name="identity"/><br />
+		<label for="identity">Minimum Length:</label>
+		<input id="length" type="search" name="length"/><br /><br />
+		
+		<!--SORT BY SETTINGS-->
+		<label for="sort_by">Sort by</label>
+		<select name="sort_by" id="sort_by">
+			<option value="UCNE_name">UCNE name</option>
+			<option value="organism">Organism</option>
+			<option value="chromosome">Chromosome</option>
+			<option value="identity_desc">Identity desc.</option>
+			<option value="identity_asc">Identity asc.</option>
+			<option value="length_desc">Length desc.</option>
+			<option value="length_asc">Length asc.</option>
+		</select><br />
+		
+		<input name="submit" type="submit" id="submit" value="submit">
+	</form>
+	<!--SEARCHING INDICATOR-->
+	<section id='search_progress'>
+		<p>
+			<span id='searching'>searching</span>
+			<img src="img/ui-anim_basic_16x16.gif">
+		</p>
+	</section>
+	<!-- RESULTS TABLE -->
+	<section id='results'>
+		<p>
+			<span id='match_count'></span>
+		</p>
+		<table id = "results_table">
+			<thead>
+			<tr>
+			</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>
