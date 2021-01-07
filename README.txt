@@ -2,8 +2,6 @@ Ultraconserved Non-coding Elements Database Usage
 
 written by John McElderry
 
-database can be accessed at http://bfx3.aap.jhu.edu/jmcelde1/final/final.html
-
 *WRITTEN USING*
 jQuery
 ajax
