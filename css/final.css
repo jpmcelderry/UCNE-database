@@ -20,7 +20,17 @@ td {
 label {
 	color: white;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	width: 180px;
+	display: inline-block;
+	text-align: right;
 }
+.coordinates label{
+	display: inline;
+}
+.coordinates {
+	margin-left: 180px;
+}
+
 span {
 	color: white;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
