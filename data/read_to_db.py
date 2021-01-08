@@ -8,6 +8,9 @@ import mysql.connector
 conn = mysql.connector.connect(user='', password='', host='', database='')
 cursor = conn.cursor()
 
+makeDB = """CREATE TABLE IF NOT EXISTS UCE (UCNE_id INT(20) NOT NULL, name VARCHAR(50) NOT NULL, UCRB VARCHAR(25) DEFAULT("chr"), organism VARCHAR(50) NOT NULL, chromosome VARCHAR(25) NOT NULL, start INT(15) NOT NULL, stop INT(15) NOT NULL,length INT(15) NOT NULL, identity FLOAT, PRIMARY KEY(name,organism))"""
+cursor.execute(makeDB);
+
 hg19_UCE = open("hg19_UCNE_coord.bed",'r')
 #hg19_cluster = open("hg19_clusters_coord.bed","r")
 danRer7_UCE = open("danRer7_UCNE_orthologs.bed",'r')
