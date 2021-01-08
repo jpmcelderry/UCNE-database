@@ -2,7 +2,7 @@ Ultraconserved Non-coding Elements Database Usage
 
 written by John McElderry
 
-*WRITTEN USING*
+*WRITTEN WITH/DEPENDENCIES*
 jQuery
 ajax
 python3
@@ -10,7 +10,9 @@ python CGI
 python mysql.connector
 
 *USAGE*
-The database is relatively straightforward to use. Fields can be mixed and matched for customized querying, and any field left blank simply won't be used as a filter. Note that the assemblies used when describing genome coordinates for human, mouse, and zebrafish are hg19, mm10, and danRer7 respectively. An explanation of the fields and their purpose:
+The database is relatively straightforward to use. To begin, set up a database in which to load the data and enter your credentials+database info into the relevant spots in the data/read_to_db.py and all .cgi scripts. The table within the database can be created and populated by running the data/read_to_db.py script.
+
+Fields can be mixed and matched for customized querying, and any field left blank simply won't be used as a filter. Note that the assemblies used when describing genome coordinates for human, mouse, and zebrafish are hg19, mm10, and danRer7 respectively. An explanation of the fields and their purpose:
 
 UCNE id: 
 the UCNE ID, according to UCNEbase IDs
